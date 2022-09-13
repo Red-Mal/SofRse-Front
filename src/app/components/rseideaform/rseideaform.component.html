@@ -1,0 +1,51 @@
+
+<div class="container fluid">
+
+    <div class="container-fluid h-custom">
+      <label  class="form-label">Théme:</label>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
+        <button (click)="isGoodPractice()" type="button" class="btn btn-outline-primary" [ngClass]="goodPractice?'active':''" data-bs-toggle="button" autocomplete="off">Good Practice</button>
+        <button  (click)="isDefectiveMat()" type="button" class="btn btn-outline-primary " [ngClass]="defectiveMateriel?'active':''" data-bs-toggle="button" autocomplete="off" aria-pressed="true">Defective Materiel</button>
+        <button (click)="isOther()" type="button" class="btn btn-outline-primary"  [ngClass]="other?'active':''" data-bs-toggle="button" autocomplete="off">Other</button>
+      </div>
+
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <form [formGroup]="newRseIdeaFormGroup" (ngSubmit)="handleSaveRseIdea()" >
+          <div class="mb-3">
+            <label  class="form-label">Email</label>
+            <input type="email" formControlName="email" class="form-control"  aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Description</label>
+            <textarea type="text" formControlName="description" class="form-control" ></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label  class="form-label">Materiel Localisation</label>
+            <input type="text" formControlName="localisation" class="form-control" >
+          </div>
+
+          <div class="mb-3">
+            <label  class="form-label">I want to participate in this idea</label>
+            <div class="form-check">
+              <input class="form-check-input" formControlName="isParticipated" type="radio"  value=true checked>
+              <label class="form-check-label" >
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" formControlName="isParticipated" type="radio"  value=false>
+              <label class="form-check-label" >
+               No
+              </label>
+            </div>
+          </div>
+
+          <button  class="btn btn-primary" >Add New Idea</button>
+        </form>
+      </div>
+    </div>
+
+</div>
+

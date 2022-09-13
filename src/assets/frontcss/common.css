@@ -1,0 +1,245 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {overflow: -moz-scrollbars-vertical;}
+body {margin: 0; padding: 0; position: relative; background: #FFF url(../images/common/bg_body.png) repeat-x 0 100px; font-family: Arial, Helvetica, sans-serif; color: #13404D; font-size: 12px;}
+* {margin: 0; padding: 0;}
+
+
+
+/********************/
+/***************** COLORS ********************/
+/********************/
+.ciel {color: #ACD2F4;}
+.cieldark {color: #51B6E3;}
+.turquoise {color: #00A4E4;}
+.turquoisedark {color: #0081C6;}
+.aqua {color: #22BCB9;}
+.aquadark {color: #008C99;}
+.vert {color: #7AC143;}
+.vertdark {color: #00A94F;}
+.anis {color: #C1D82F;}
+.jaune {color: #FFE512;}
+.jaunedark {color: #FFC425;}
+.orange {color: #FF9728;}
+.orangedark {color: #F3701C;}
+.rouge {color: #EF3E42;}
+.rougedark {color: #D11242;}
+.violet {color: #AA74C2;}
+.violetdark {color: #7D4199;}
+.bleu {color: #0267AD;}
+.bleudark {color: #00387A;}
+
+
+/********************/
+/***************** COMMON ********************/
+/********************/
+
+
+/************** WRAPPER *****************/
+div#wrapper {width: 1000px; margin: 0 auto; position: relative; z-index: 99;}
+
+
+/************** TEXTES / BLOCS *****************/
+nav, aside, article, hgroup, figure {display: block;}
+
+h2 {text-transform: uppercase; font-size: 15px;}
+h2 small {font-size: 15px;}
+
+a {outline: none; border: none; text-decoration: none; color: #13404D;}
+img {border: none;}
+ul, ol, li, dl, dd, dt {list-style: none;}
+p {margin-bottom: 15px;}
+
+
+/************** CLASSES *****************/
+.clear {display: block; clear: both; font-size: 1px; height: 0; line-height: 0;}
+p.chapo {font-weight: bold; font-size: 14px; margin-bottom: 40px;}
+div.shadow {padding: 15px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.10); -webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.10); box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.10); behavior: url(squelettes/js/PIE.htc);}
+p.bottom {position: absolute; bottom: 4px; left: 4px; margin: 0; padding: 1px 5px 1px 0; text-align: right; display: block;}
+p.bottom a {background: url(../images/common/flech_link.png) no-repeat 0 center; padding: 0 5px 0 10px;}
+
+a.ppt, a.doc, a.pps, a.dot, a.xls, a.pdf, a.zip, a.img, a.map {padding-left: 25px;}
+a.ppt, a.pps {background: url(../images/common/icon_ppt.png) no-repeat 0 0; padding-left: 25px;}
+a.doc, a.dot {background: url(../images/common/icon_doc.png) no-repeat 0 0;}
+a.xls {background: url(../images/common/icon_xls.png) no-repeat 0 0;}
+a.pdf {background: url(../images/common/icon_pdf.png) no-repeat 0 0;}
+a.zip {background: url(../images/common/icon_zip.png) no-repeat 0 0;}
+a.img {background: url(../images/common/icon_img.png) no-repeat 0 0;}
+a.map {background: url(../images/common/icon_carte.png) no-repeat 0 0;}
+
+/********************/
+/***************** HEADER ********************/
+/********************/
+
+div#b_header {position: relative; height: 125px; padding-top: 40px; margin-bottom: 40px;}
+div#b_header header {height: 125px;}
+div#b_header header h1 img { position: relative; top: -26px; }
+div#b_header header h2 {position: absolute; right: 0; top: 60px; font-size: 30px;}
+div#b_header header h2 span {color: #0267AD;}
+
+div#b_header nav {position: absolute; right: 0; top: 120px; z-index: 2000;}
+nav ul#menu li {display: block; float: left; padding-top: 10px; position: relative; background: url(../images/common/line_menu.png) no-repeat 0 0;}
+nav ul#menu li:first-child {background: none;}
+nav ul#menu li:last-child a {clear: right;}
+nav ul#menu li a {font-weight: bold; zoom: 1; position: relative; z-index: 2000; display: block; float: left; color: #FFF; text-transform: uppercase; font-size: 12px; height: 25px; padding: 0 10px;}
+nav ul#menu li a:hover, nav ul#menu li.on a {background: url(../images/common/fleche_nav.png) no-repeat center bottom; color: #ACD2F4; z-index: 2000;}
+nav ul#menu li a:hover {color: #00A4E4; background: url(../images/common/fleche_nav.png) no-repeat center 20px; z-index: 2000;}
+nav ul#menu li.on a {background: url(../images/common/fleche_nav.png) no-repeat center 20px; z-index: 2000;}
+
+
+/********************/
+/***************** MASTER MENU ********************/
+/********************/
+div.mastermenu {display: none; width : 680px; padding: 20px 5px 10px 5px; position: absolute; left: 310px; top: 155px; z-index: 1500; background: #FFF; -moz-box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.10); -webkit-box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.10); box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.10); behavior: url(squelettes/js/PIE.htc);}
+div.mastermenu nav ul {clear: both;}
+div.mastermenu nav ul ul {clear: none;}
+div.mastermenu nav li {display: block; float: left; width: 160px; margin: 0 5px 15px 5px;}
+div.mastermenu nav li a {display: block; font-weight: bold; font-size: 11px; padding: 5px 10px; background: #dfe8eb; height: 25px; line-height: 12px;}
+div.mastermenu nav li a:hover {background: #51B6E3; color: #FFF;}
+div.mastermenu nav li li {float: none; width: auto; margin: 0; border-top: 1px dotted #CCD7DB;}
+div.mastermenu nav li li:first-child {border: none;}
+div.mastermenu nav ul.lev2 li a {background: url(../images/common/fleche_menu.png) no-repeat right 7px; padding-right: 15px;}
+div.mastermenu nav li li a {background: none; height: auto;}
+div.mastermenu nav li li a:hover {color: #51B6E3;}
+div.mastermenu nav li li ul {display: none;}
+div.mastermenu nav ul.lev3 li a {font-weight: normal;}
+div.mastermenu nav ul.lev3 li a:hover {background: none;}
+div.mastermenu nav li.all {background: url(../images/common/flech_blue.png) no-repeat 10px 10px; padding-left: 15px; padding-top: 5px;}
+div.mastermenu nav li.all a {color: #51B6E3; text-transform:none;}
+div.mastermenu nav li.all a:hover, div.mastermenu nav li.all.active a {text-decoration: underline;}
+div.mastermenu nav.tools {width: auto; border: none;}
+div.mastermenu nav.tools li {display: block; float: left; width: 200px; margin-left: 15px; border: 1px solid #CEDAE0; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; behavior: url(squelettes/js/PIE.htc);}
+div.mastermenu nav.tools li a {padding: 5px;}
+div.mastermenu nav.tools li img {vertical-align: middle; border: 1px solid #CEDAE0; margin-right: 5px;}
+div.mastermenu nav.tools li.all{border:none; margin:5px;}
+div.mastermenu nav.tools li.all a{padding:5px 20px;}
+
+
+/********************/
+/***************** BLOC CENTRAL ********************/
+/********************/
+
+div#b_central {z-index: 500; position: relative; left: 10px; width: 710px; min-height: 400px; float: left; margin-bottom: 50px; background: #FFF; padding: 15px 15px 40px 15px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 0 2px 5px 1px #DDD; -webkit-box-shadow: 0 2px 5px 1px #DDD; box-shadow: 0 1px 5px 1px #DDD; behavior: url(squelettes/js/PIE.htc);}
+
+
+/* ARIANE */
+div#ariane {font-size: 11px; color: #8E9EA6; margin-bottom: 40px;}
+div#ariane a {color: #8E9EA6; text-decoration: underline;}
+div#ariane a:hover, div#ariane strong {color: #13404D;}
+
+/* TITRE */
+div#b_central p.titre {font-size: 20px; text-transform: uppercase; font-weight: bold; margin: 0 0 20px 0;}
+
+
+
+
+/********************/
+/***************** COLONNE DROITE ********************/
+/********************/
+
+div#b_right {float: right; width: 230px;}
+div#b_right div {margin-bottom: 20px; position: relative;}
+
+
+
+/* BLOC IDENTIFICATION */
+div#ident {width: 200px; /*height: 70px;*/ background: #F1F5F8;}
+div#ident p#id {position: relative; left: -10px; top: -10px; width: 170px; padding: 5px 40px 5px 10px; margin-bottom: 5px; font-weight: bold; background: #FFF; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; behavior: url(squelettes/js/PIE.htc);}
+div#ident p#id input.deconnex {position: absolute; right: 5px; top: 2px; display: block; background: url(../images/common/bt_deconnexion.png) no-repeat 0 0; border: none; cursor: pointer; width: 31px; height: 22px; text-indent: -9999px;}
+div#ident h3 {font-size: 13px; text-transform: uppercase; padding: 15px 0 5px 0;}
+*+html div#ident h3 {padding: 10px 0 5px 0;}
+div#ident form input.txt {color: #13404D; width: 145px; height: 25px; padding: 0 10px; margin: 0 5px 5px 0; -moz-box-shadow: inset 0 0 6px #6B8690; -webkit-box-shadow: inset 0 0 6px #6B8690; box-shadow: inset 0 0 6px #6B8690; border: none; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; behavior: url(squelettes/js/PIE.htc);}
+div#ident form input.bt_ok {position: relative; top: -2px; background: url(../images/common/bt_ok.png) no-repeat 0 0; border: none; width: 25px; height: 25px; text-indent: -9999px; cursor: pointer;}
+
+*+html div#ident h3 {padding: 5px 0;}
+*+html div#ident form input.txt {border: 1px solid #D7DEE8;}
+
+
+/* KIT DU VOYAGEUR */
+div#kit {background: #F1F5F8 url(../images/pages/icon_kit.png) no-repeat 170px 10px; padding-bottom: 40px;}
+div#kit h2 {margin-bottom: 10px; color: #0267AD; font-size: 16px; width: 140px;}
+div#kit h3 {font-size: 12px; margin-bottom: 10px;}
+div#kit li {margin-bottom: 5px; font-size: 11px;}
+div#kit a {color: #0267AD; font-weight: bold;}
+div#kit p.bottom {background: #FFF; width: 217px; line-height: 26px;}
+/*div#kit p.bottom a {background: url(../images/common/icon_zip_big.png) no-repeat 0 center; padding: 5px 0 5px 25px;}*/
+div#kit a:hover {text-decoration: underline;}
+
+
+
+
+/********************/
+/***************** FOOTER ********************/
+/********************/
+div#b_footer {position: relative; z-index: 1; min-height: 250px; margin-top: 60px; background: #F1F5F8 url(../images/common/bg_footer.png) no-repeat right 0;
+-moz-box-shadow: 0 -2px 5px 1px #DDD; 
+-webkit-box-shadow: 0 -2px 5px 1px #DDD; 
+box-shadow: 0 -2px 5px 1px #DDD; 
+behavior: url(squelettes/js/PIE.htc);}
+div#b_footer footer {width: 980px; margin: 0 auto; padding: 30px 0 0 20px; position: relative;}
+div#b_footer footer ul#tools {padding: 10px 0 5px 0; position: absolute; top: -45px; right: 0; background: #F1F5F8; 
+-webkit-border-top-left-radius: 3px;
+-webkit-border-top-right-radius: 3px;
+-moz-border-radius-topleft: 3px;
+-moz-border-radius-topright: 3px;
+border-top-left-radius: 3px;
+border-top-right-radius: 3px;
+-moz-box-shadow: 0 -3px 5px 1px #DDD; 
+-webkit-box-shadow: 0 -3px 5px 1px #DDD; 
+box-shadow: 0 -3px 5px 1px #DDD; 
+behavior: url(squelettes/js/PIE.htc);}
+div#b_footer footer ul#tools li {display: block; float: left; padding: 0 15px; border-right: 1px solid #CAE0E8;}
+div#b_footer footer ul#tools li:last-child, div#b_footer footer ul#tools li.last {border: none;}
+div#b_footer footer h2 {position: absolute; top: 30px; right: 10px;}
+div#b_footer footer h3 {font-size: 13px; margin-bottom: 5px;}
+div#b_footer footer section {float: left; width: 190px; padding-left: 10px; border-left: 1px solid #CAE0E8; text-transform: uppercase; margin-bottom: 30px;}
+div#b_footer footer section.last {margin: 0;}
+div#b_footer footer li {margin-bottom: 5px; font-size: 11px;}
+div#b_footer footer a.see_all {font-weight: bold; background: url(../images/common/flech_link.png) no-repeat 0 center; padding-left: 15px; font-size: 11px;}
+div#b_footer footer a:hover {color: #00A4E4;}
+
+/********************/
+/***************** ENVOI AMI ********************/
+/********************/
+div#div_envoi_ami fieldset {border:0;}
+div#div_envoi_ami label{display: block; margin:0 0 5px 0; font-weight:bold;}
+div#div_envoi_ami input.text {display: block; width:300px; height:25px; margin:0 0 10px 0; padding:0 5px;}
+div#div_envoi_ami textarea {width:300px; height:80px; margin:0 0 10px 0; padding:0 5px;}
+div#div_envoi_ami input.ui-button {float:right; display:block; margin:10px; color:#0081C6;}
+div#div_envoi_ami .erreur_message {color:#f60;}
+div#div_envoi_ami .reponse_formulaire_erreur {color:#f60; margin:5px 0 10px 0;}
+
+/********************/
+/***************** POUR CONTRER LE CSS JQUERY POUR ENVOI AMI, DANS TABS ********************/
+/********************/
+div#tabs{font-family: Arial,Helvetica,sans-serif; font-size: 12px;}
+div#actus .ui-widget-content {background:none; border:none;}
+div#tabs ul.ui-widget-header {background:none; border:none;}
+div#tabs ul li.ui-state-active {border:none; font-weight:normal;}
+div#tabs ul li.ui-state-default {border:none; font-weight:normal;}
+div#tabs ul li.ui-state-default a{color:#13404D;}
+
+/********************/
+/***************** POPINS MY TOOLS, MY NEWS ********************/
+/********************/
+div#popin_my_tools{/height:450px; /width:280px;}
+div#popin_my_news{/height:600px; /width:750px;}
+div.my_popin h2 {color:#F3701C; margin:5px 5px 15px 5px;}
+div.my_popin div.popin_col {float:left; display:inline; width:auto; margin:5px 10px;}
+div.my_popin h3 {margin-bottom:10px; font-size:14px;}
+div.my_popin ul {float:left; display:block;}
+div.my_popin ul li {}
+div.my_popin ul li label.on {font-weight:bold; color:#F3701C;}
+
+a#bt_login{color:#F3701C;}
+div.my_popin form input.bt_ok {position: relative; top: -2px; background: url(../images/common/bt_ok.png) no-repeat 0 0; border: none; width: 25px; height: 25px; text-indent: -9999px; cursor: pointer; float:right; margin:10px;}
+
+.spip_documents_left img {margin-right:10px;}
+.spip_documents_right img {margin-left:10px;}
+
+
+
+
+
+

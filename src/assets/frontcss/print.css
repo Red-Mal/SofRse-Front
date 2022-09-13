@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+div#spip-admin {display:none;}
+
+div#b_header a#lang {display:none;}
+div#b_header ul#menu {display:none;}
+
+div#wrapper div#b_central {float: none; width: 960px;}
+div#wrapper div#b_central p.titre {display:none;}
+
+div#wrapper div#b_central div#content {width:910px; border:0; padding:0 25px;}
+
+div#bt_print {display: none;}
+
+/****** COLONNE GAUCHE ******/
+div#navleft {display: none;}
+
+/****** COLONNE DROITE ******/
+div#b_right {display: none;}
+
+/****** FOOTER ******/
+div#b_footer {display: none;}

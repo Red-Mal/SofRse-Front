@@ -8,13 +8,15 @@ import { LoginComponent } from './components/login/login.component';
 import { RseideaformComponent } from './components/rseideaform/rseideaform.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     LoginComponent,
-    RseideaformComponent
+    RseideaformComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

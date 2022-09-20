@@ -4,6 +4,7 @@ import {RseIdeaService} from "../../services/rse-idea.service";
 import {Router} from "@angular/router";
 import {DefectiveMateriel} from "../../models/DefectiveMateriel";
 import {GoodPractice} from "../../models/GoodPractice";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-rseideaform',
@@ -12,14 +13,16 @@ import {GoodPractice} from "../../models/GoodPractice";
 })
 export class RseideaformComponent implements OnInit {
   newRseIdeaFormGroup!:FormGroup;
-  goodPractice:boolean=false;
+  goodPractice:boolean=true;
   defectiveMateriel:boolean=false;
   other:boolean=false;
-  constructor(private fb:FormBuilder,private rseIdeaService:RseIdeaService,private router:Router) {
+  constructor(private fb:FormBuilder,private rseIdeaService:RseIdeaService,private router:Router,private http:HttpClient) {
 
   }
 
   ngOnInit(): void {
+
+
     this.newRseIdeaFormGroup=this.fb.group({
       "email":this.fb.control(""),
       "description":this.fb.control(""),
@@ -74,6 +77,5 @@ export class RseideaformComponent implements OnInit {
     this.goodPractice=false;
     this.defectiveMateriel=false;
     return this.other;
-
   }
 }

@@ -27,7 +27,10 @@
               "node_modules/mdb-ui-kit/css/mdb.dark.min.css",
               "node_modules/mdb-ui-kit/css/mdb.dark.rtl.min.css",
               "node_modules/mdb-ui-kit/css/mdb.min.css",
-              "node_modules/mdb-ui-kit/css/mdb.rtl.min.css"
+              "node_modules/mdb-ui-kit/css/mdb.rtl.min.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": [
               "node_modules/mdb-ui-kit/js/mdb.min.js"

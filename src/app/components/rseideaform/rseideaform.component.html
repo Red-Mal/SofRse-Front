@@ -1,10 +1,11 @@
+<div class="d-flex align-items-center flex-column bd-highlight mt-5" style="height: 200px;">
 
-<div class="container fluid">
+    <div class="container h-custom mt-5"  style="width:500px">
 
-    <div class="container-fluid h-custom">
+
       <label  class="form-label">Théme:</label>
 
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end ">
         <button (click)="isGoodPractice()" type="button" class="btn btn-outline-primary" [ngClass]="goodPractice?'active':''" data-bs-toggle="button" autocomplete="off">Good Practice</button>
         <button  (click)="isDefectiveMat()" type="button" class="btn btn-outline-primary " [ngClass]="defectiveMateriel?'active':''" data-bs-toggle="button" autocomplete="off" aria-pressed="true">Defective Materiel</button>
         <button (click)="isOther()" type="button" class="btn btn-outline-primary"  [ngClass]="other?'active':''" data-bs-toggle="button" autocomplete="off">Other</button>
@@ -21,7 +22,7 @@
             <textarea type="text" formControlName="description" class="form-control" ></textarea>
           </div>
 
-          <div class="mb-3">
+          <div class="mb-3" *ngIf="defectiveMateriel">
             <label  class="form-label">Materiel Localisation</label>
             <input type="text" formControlName="localisation" class="form-control" >
           </div>
@@ -47,5 +48,5 @@
       </div>
     </div>
 
-</div>
 
+</div>

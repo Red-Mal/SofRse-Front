@@ -1,0 +1,70 @@
+<div class="row" style="margin-top: 10%">
+  <div class="col-md-2">
+
+  </div>
+
+  <div class="col-md-9 mt-5" >
+    <div >
+      <p-table #dt1  [value]="goodPractices" [lazy]="false" (onLazyLoad)="loadGoodPractices()" responsiveLayout="scroll" dataKey="id"
+               [selection]="selectedGoodPractices" (selectionChange)="onSelectionChange($event)" [selectAll]="selectAll" (selectAllChange)="onSelectAllChange($event)"
+               [paginator]="true" [rows]="10" [totalRecords]="totalRecords" [loading]="loading" [globalFilterFields]="['email','description', 'status','isParticipated']">
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="width: 3rem"></th>
+            <th pSortableColumn="email" >Email <p-sortIcon field="email" ></p-sortIcon></th>
+            <th pSortableColumn="description">Description <p-sortIcon field="description"></p-sortIcon></th>
+            <th pSortableColumn="status">Statut <p-sortIcon field="status"></p-sortIcon></th>
+            <th pSortableColumn="status">Participated <p-sortIcon field="isParticipated"></p-sortIcon></th>
+
+
+          </tr>
+          <tr>
+            <th style="width: 3rem">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th>
+              <p-columnFilter  type="text" field="email" ></p-columnFilter>
+            </th>
+            <th>
+              <p-columnFilter type="text" field="description"></p-columnFilter>
+            </th>
+            <th>
+              <p-columnFilter type="text" field="status"></p-columnFilter>
+            </th>
+            <th>
+              <p-columnFilter field="representative" matchMode="in" [showMenu]="false">
+
+              </p-columnFilter>
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-goodPractice>
+          <tr>
+            <td>
+              <p-tableCheckbox [value]="goodPractice"></p-tableCheckbox>
+            </td>
+            <td>{{goodPractice.email}}</td>
+            <td>{{goodPractice.description}}</td>
+            <td>{{goodPractice.status}}</td>
+            <td>
+              <button pButton pRipple type="button" icon="pi pi-pencil" class="p-button-rounded " ></button>
+            </td>
+            <td>
+              <button pButton pRipple type="button" icon="pi pi-trash" class="p-button-rounded p-button-danger"></button>
+
+            </td>
+
+
+
+          </tr>
+        </ng-template>
+      </p-table>
+
+    </div>
+  </div>
+  <br>
+
+</div>
+
+
+

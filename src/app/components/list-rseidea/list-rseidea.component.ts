@@ -29,10 +29,15 @@ export class ListRseideaComponent implements OnInit {
 
   ngOnInit(): void {
     this.loading = true;
-    this.loadGoodPractices();
+    this.loadIdeas();
   }
   loadIdeas(){
-
+    if(this.goodPractice){
+      this.loadGoodPractices();
+    }else
+    if(this.defectiveMateriel){
+      this.loadDefectiveMateriels();
+    }
   }
 
   loadGoodPractices() {
@@ -94,6 +99,7 @@ export class ListRseideaComponent implements OnInit {
     this.defectiveMateriel=true;
     this.otheridea=false;
     this.goodPractice=false;
+    this.loadIdeas();
     return this.defectiveMateriel;
   }
 

@@ -50,12 +50,16 @@ export class RseideaformComponent implements OnInit {
       console.log(goodPractice);
       this.rseIdeaService.saveGoodPractice(goodPractice).subscribe();
     }
-
+this.clickMethod();
 
 
 
   }
-
+  clickMethod() {
+    if(confirm("Saved with Succes")) {
+      this.router.navigate(['./navigation']);
+    }
+  }
 
   isGoodPractice() {
     this.goodPractice=true;

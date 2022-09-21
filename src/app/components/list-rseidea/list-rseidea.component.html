@@ -14,7 +14,8 @@
             <th pSortableColumn="email" >Email <p-sortIcon field="email" ></p-sortIcon></th>
             <th pSortableColumn="description">Description <p-sortIcon field="description"></p-sortIcon></th>
             <th pSortableColumn="status">Statut <p-sortIcon field="status"></p-sortIcon></th>
-            <th pSortableColumn="status">Participated <p-sortIcon field="isParticipated"></p-sortIcon></th>
+            <th pSortableColumn="isParticipated">Participated <p-sortIcon field="isParticipated"></p-sortIcon></th>
+            <th pSortableColumn="updateDelete">Update/Delete <p-sortIcon field="updateDelete"></p-sortIcon></th>
 
 
           </tr>
@@ -46,16 +47,11 @@
             <td>{{goodPractice.email}}</td>
             <td>{{goodPractice.description}}</td>
             <td>{{goodPractice.status}}</td>
+            <td>{{goodPractice.isParticipated}} </td>
             <td>
-              <button pButton pRipple type="button" icon="pi pi-pencil" class="p-button-rounded " ></button>
+              <button pButton pRipple type="button" icon="pi pi-pencil" class="p-button-rounded m-1" ></button>
+              <button pButton pRipple type="button" icon="pi pi-trash" class="p-button-rounded p-button-danger m-1"></button>
             </td>
-            <td>
-              <button pButton pRipple type="button" icon="pi pi-trash" class="p-button-rounded p-button-danger"></button>
-
-            </td>
-
-
-
           </tr>
         </ng-template>
       </p-table>

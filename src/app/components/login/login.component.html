@@ -15,7 +15,13 @@
             <div class="mb-3">
               <label  class="form-label" >Email address</label>
               <input type="email" formControlName="username" value="reda.elmallahi@sofrecom.com" placeholder="exemple@sofrecom.com" class="form-control"  aria-describedby="emailHelp">
-
+              <div class="alert alert-danger" role="alert"
+              *ngIf="loginFormGroup.controls['username'].touched
+              && loginFormGroup.controls['username'].errors
+              && loginFormGroup.controls['username'].invalid
+              && loginFormGroup.controls['username'].errors!['required']">
+          Email is Required
+            </div>
             </div>
             <div class="mb-3">
               <label  class="form-label">Password</label>
@@ -23,6 +29,13 @@
             </div>
             <div class="mb-3 form-check">
               <input type="checkbox" formControlName="remember" class="form-check-input">
+              <div class="alert alert-danger" role="alert"
+              *ngIf="loginFormGroup.controls['password'].touched
+              && loginFormGroup.controls['password'].errors
+              && loginFormGroup.controls['password'].invalid
+              && loginFormGroup.controls['password'].errors!['required']">
+          Email is Required
+            </div>
               <label class="form-check-label" >Remember me</label>
             </div>
             <button  type="submit" class="btn btn-primary" routerLink="/navigation">Connexion</button>
